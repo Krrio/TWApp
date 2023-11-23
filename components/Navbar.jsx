@@ -1,16 +1,40 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles';
 import { navVariants } from '../utils/motion';
 
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  const handleTouchOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      closeMenu();
+    }
+  };
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.addEventListener('touchstart', handleTouchOutside);
+    } else {
+      document.removeEventListener('touchstart', handleTouchOutside);
+    }
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchOutside);
+    };
+  }, [menuOpen]);
 
   const linkStyles = {
     textDecoration: 'none',
@@ -96,15 +120,16 @@ const Navbar = () => {
         />
       </div>
       <AnimatePresence>
-      {menuOpen && (
-        <motion.div
-          key="menu"
-          className="fixed top-0 left-0 h-full w-[45%] bg-white bg-opacity-75 backdrop-filter backdrop-blur-lg z-40 p-8"
-          initial={{ x: '-100%', opacity: 0 }} // Initial state: off-screen and transparent
-          animate={{ x: 0, opacity: 1 }} // Animate to on-screen and visible
-          exit={{ x: '-100%', opacity: 0 }} // Exit state: off-screen and transparent
-          transition={{ type: 'tween', duration: 0.5 }}
-        >
+        {menuOpen && (
+          <motion.div
+            ref={menuRef}
+            key="menu"
+            className="fixed top-0 left-0 h-full w-[45%] bg-white bg-opacity-75 backdrop-filter backdrop-blur-lg z-40 p-8"
+            initial={{ x: '-100%', opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: '-100%', opacity: 0 }}
+            transition={{ type: 'tween', duration: 0.5 }}
+          >
           <ul style={{ listStyle: 'none', padding: 0 }}>
             <motion.li
               initial={{ x: -50, opacity: 0 }} // Initial state: off-screen and transparent

@@ -7,6 +7,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import { newFeatures } from '../constants';
 import { NewFeatures, TitleText, TypingText } from '../components';
 import { planetVariants, staggerContainer, fadeIn } from '../utils/motion';
+import Link from 'next/link';
 
 const WhatsNew = () => {
   const buttonStyles = {
@@ -21,6 +22,7 @@ const WhatsNew = () => {
     position: 'relative',
     overflow: 'hidden',
     transition: 'all 0.3s ease',
+    width: '100%',
   };
 
   const arrowStyles = {
@@ -62,15 +64,19 @@ const WhatsNew = () => {
             ))}
           </div>
           
-          <button
-            style={buttonStyles}
-            onMouseEnter={handleHover}
-            onMouseLeave={handleHoverOut}
-          >
-            <span style={{ display: 'flex', alignItems: 'center' }}>
-              Sprawdź pełną ofertę <FaArrowRight className="ml-2" style={arrowStyles} />
-            </span>
-          </button>
+          <Link href="/Oferta" passHref> {/* Wrap the button with Link and set href */}
+          <a style={{ textDecoration: 'none' }}> {/* Style the link as a button */}
+            <button
+              style={buttonStyles}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHoverOut}
+            >
+              <span style={{ display: 'flex', alignItems: 'center' }}>
+                Sprawdź pełną ofertę <FaArrowRight className="ml-2" style={arrowStyles} />
+              </span>
+            </button>
+          </a>
+        </Link>
         </motion.div>
 
         <motion.div

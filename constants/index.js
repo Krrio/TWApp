@@ -6,13 +6,54 @@ export const exploreWorlds = [
   },
   {
     id: 'world-2',
-    imgUrl: '/zdj2.png',
+    imgUrl: '/apartament2.jpg',
     title: 'Przytulne Apartamenty',
   },
   {
     id: 'world-3',
     imgUrl: '/zdj3.jpg',
     title: 'Kraniec świata',
+  },
+];
+
+export const SaunaMastersWoman = [
+  {
+    id: 'world-1',
+    imgUrl: '/saunm5.JPG',
+    title: 'Placeholder1',
+  },
+  {
+    id: 'world-2',
+    imgUrl: '/saunm5.JPG',
+    title: 'Emulka',
+  },
+  {
+    id: 'world-3',
+    imgUrl: '/saunm6.JPG',
+    title: 'Placeholder3',
+  },
+];
+
+export const SaunaMastersMan = [
+  {
+    id: 'world-1',
+    imgUrl: '/saunm1.JPG',
+    title: 'Placeholder1',
+  },
+  {
+    id: 'world-2',
+    imgUrl: '/saunm2.JPG',
+    title: 'Wojtek',
+  },
+  {
+    id: 'world-3',
+    imgUrl: '/saunm3.JPG',
+    title: 'Placeholder3',
+  },
+  {
+    id: 'world-4',
+    imgUrl: '/saunm4.JPG',
+    title: 'Placeholder3',
   },
 ];
 
@@ -61,9 +102,16 @@ export const socials = [
   {
     name: 'instagram',
     url: '/instagram1.svg',
+    link: 'https://www.instagram.com/tarninowe_wzgorze/'
   },
   {
     name: 'facebook',
     url: '/facebook1.svg',
+    link: 'https://www.facebook.com/tarninowewzgorze/?locale=pl_PL'
+  },
+  {
+    name: 'tiktok',
+    url: '/tiktok.svg',
+    link: 'https://www.tiktok.com/@tarninowewzgorze'
   },
 ];

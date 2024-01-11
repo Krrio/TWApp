@@ -1,12 +1,13 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 
 const InsightCard = ({ imgUrl, title, subtitle, index }) => {
   const arrowVariants = {
     initial: { x: 0 },
-    hover: { x: 10 }, 
+    hover: { x: 10 },
   };
 
   return (
@@ -29,18 +30,20 @@ const InsightCard = ({ imgUrl, title, subtitle, index }) => {
           </p>
         </div>
 
-        <motion.div
-          className="hovered-arrow-container"
-          whileHover="hover"
-          variants={arrowVariants}
-          style={{ cursor: 'pointer' }}
-        >
-          <img
-            src="/arrow2.svg"
-            alt="arrow"
-            className="w-[40px] h-[40px] object-contain"
-          />
-        </motion.div>
+        <Link href="/Oferta" passHref> {/* Wrap the arrow image with Link */}
+          <motion.div
+            className="hovered-arrow-container"
+            whileHover="hover"
+            variants={arrowVariants}
+            style={{ cursor: 'pointer' }}
+          >
+            <img
+              src="/arrow2.svg"
+              alt="arrow"
+              className="w-[40px] h-[40px] object-contain"
+            />
+          </motion.div>
+        </Link>
       </div>
     </motion.div>
   );

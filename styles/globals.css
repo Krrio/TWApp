@@ -10,6 +10,13 @@
   scroll-behavior: smooth;
 }
 
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .gradient-01 {
   background-image: linear-gradient(
     270deg,
@@ -160,3 +167,24 @@
 .text-black-50 {
   color: #888888; /* Replace this color value with your desired lighter black or dark gray */
 }
+
+.nav-item:not(:last-child) {
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+/* Styl niestandardowej belki przewijania dla całej strony */
+::-webkit-scrollbar {
+  width: 12px; /* Szerokość belki */
+}
+
+/* Styl belki przewijania podczas jej przewijania */
+::-webkit-scrollbar-thumb {
+  background: #000; /* Kolor belki przewijania */
+  border-radius: 0px; /* Zaokrąglenie rogów belki */
+}
+
+/* Styl obszaru, który można przewijać (jeśli chcesz zmienić kolor tła obszaru przewijania) */
+::-webkit-scrollbar-track {
+  background: #fff; /* Kolor tła obszaru przewijania */
+}
+

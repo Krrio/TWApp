@@ -1,5 +1,7 @@
-import { Footer, Navbar } from '../components';
-import { About, Explore, Feedback, GetStarted, Hero, Insights, WhatsNew, World } from '../sections';
+/* eslint-disable eol-last */
+
+import { Footer, Navbar, WorkWith } from '../components';
+import { Explore, Feedback, GetStarted, Hero, Insights, WhatsNew, World } from '../sections';
 
 const Page = () => (
   <div className="page-background-3 overflow-hidden">
@@ -16,6 +18,7 @@ const Page = () => (
     <div className="relative">
       <Insights />
       <Feedback />
+      <WorkWith />
     </div>
     <Footer />
   </div>

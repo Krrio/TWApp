@@ -13,8 +13,8 @@ const Feedback = () => (
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex
-        lg:flex-row flex-col gap-6`}
-        style={{ alignItems: 'flex-start' }}
+        lg:flex-row flex-col gap-6 justify-center align-items-start`} // Added align-items-start
+        style={{ alignItems: 'start' }} // Align items at the start
       >
         <motion.div
           variants={fadeIn('right', 'tween', 0.2, 1)}

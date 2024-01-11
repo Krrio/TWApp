@@ -122,6 +122,41 @@ export const planetVariants = (direction) => ({
   },
 });
 
+export const cloudVariants = (direction, screenWidth) => ({
+  hidden: {
+    x: direction === 'left' ? '-100%' : '100%',
+    rotate: 120,
+  },
+  show: {
+    x: screenWidth < 768 ? 0 : 350, // Adjust value for small screens
+    rotate: 0,
+    transition: {
+      type: 'spring',
+      duration: 1.8,
+      delay: 0.5,
+    },
+  },
+});
+
+export const cloudVariants1 = (direction, screenWidth) => ({
+  hidden: {
+    x: direction === 'left' ? '-100%' : '100%',
+    rotate: 120,
+  },
+  show: {
+    x: screenWidth < 768 ? 0 : -350,
+    translateY: screenWidth < 768 ? '-90%' : '0%', // Move image higher on small devices
+    rotate: 0,
+    transition: {
+      type: 'spring',
+      duration: 1.8,
+      delay: 0.5,
+    },
+  },
+});
+
+
+
 export const zoomIn = (delay, duration) => ({
   hidden: {
     scale: 0,

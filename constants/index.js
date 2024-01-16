@@ -1,18 +1,18 @@
 export const exploreWorlds = [
   {
     id: 'world-1',
-    imgUrl: '/zdj1.png',
-    title: 'Stworzone z Pasji',
+    imgUrl: '/owners.JPG',
+    title: 'Miejsce stworzone z Pasji',
   },
   {
     id: 'world-2',
-    imgUrl: '/apartament2.jpg',
-    title: 'Przytulne Apartamenty',
+    imgUrl: '/pokojexplore1.jpg',
+    title: 'Przytulne Apartamenty i Pokoje',
   },
   {
     id: 'world-3',
-    imgUrl: '/zdj3.jpg',
-    title: 'Kraniec świata',
+    imgUrl: '/explorezdj.jpg',
+    title: 'Magiczny koniec świata',
   },
 ];
 
@@ -20,7 +20,7 @@ export const SaunaMastersWoman = [
   {
     id: 'world-1',
     imgUrl: '/saunm5.JPG',
-    title: 'Placeholder1',
+    title: 'Małgosia',
   },
   {
     id: 'world-2',
@@ -30,7 +30,7 @@ export const SaunaMastersWoman = [
   {
     id: 'world-3',
     imgUrl: '/saunm6.JPG',
-    title: 'Placeholder3',
+    title: 'Aneta',
   },
 ];
 
@@ -38,7 +38,7 @@ export const SaunaMastersMan = [
   {
     id: 'world-1',
     imgUrl: '/saunm1.JPG',
-    title: 'Placeholder1',
+    title: 'Robert',
   },
   {
     id: 'world-2',
@@ -48,12 +48,12 @@ export const SaunaMastersMan = [
   {
     id: 'world-3',
     imgUrl: '/saunm3.JPG',
-    title: 'Placeholder3',
+    title: 'Maciej',
   },
   {
     id: 'world-4',
     imgUrl: '/saunm4.JPG',
-    title: 'Placeholder3',
+    title: 'Marcin "Popek"',
   },
 ];
 
@@ -68,33 +68,43 @@ export const newFeatures = [
     imgUrl: '/balloon.svg',
     title: 'A może by tak aktywnie?',
     subtitle:
-        'W naszym hotelu czekają niezapomniane atrakcje, takie jak basen, Body Zorbing, Off Road, Zalew Klimkówka i wypożyczalnia rowerów.',
+        'W naszej agroturystyce czekają niezapomniane atrakcje: basen, wypożyczalnia rowerów górskich, wyprawy Off-roadowe oraz spacery w pobliskim lesie.',
   },
   {
     imgUrl: '/towel.svg',
     title: 'A może coś na spokojniej?',
     subtitle:
-        'Po aktywnym dniu, goście mogą zrelaksować się w ruskiej bani lub saunie fińskiej, a noce saunowe dostarczą dodatkowych doznań.',
+        'Po aktywnym dniu, goście mogą zrelaksować się w ruskiej bani lub saunie fińskiej, a także pobiesiadować w chacie grilowej. Co tydzień organizowane są aromatyczne noce saunowe.',
   },
 ];
 
 export const insights = [
   {
-    imgUrl: '/apartamentof1.jpg',
+    imgUrl: '/awslins.jpg',
     title: 'Apartament w Stronę Lasu',
     subtitle:
-        'To nasza urokliwa oaza, gdzie każdego ranka budzisz się wśród szumiących drzew lasu.',
+        'Widok na las | Aneks kuchenny | Prywatna łazienka | 2 sypialnie | Salon z kominkiem | Taras',
   },
   {
-    imgUrl: '/apartamentof4.jpg',
+    imgUrl: '/awslins1.jpg',
     title: 'Apartament w Stronę Słońca',
     subtitle:
-        'To nasza słoneczna oaza, gdzie każdego ranka budzisz się w promieniach słońca.',
+        'Widok na wzgórza | Aneks kuchenny | 2 prywatne łazienki | 3 sypialnie | Salon z kominkiem | Taras',
   },
   {
-    imgUrl: '/apartamentof3.jpg',
+    imgUrl: '/awslins2.jpg',
+    title: 'Apartament Boho',
+    subtitle: 'Rustykalny wystrój | Aneks kuchenny | 2 sypialnie | Prywatna łazienka | Salon z kominkiem | Taras',
+  },
+  {
+    imgUrl: '/awslins3.jpg',
+    title: 'Pokój Leszczynowy',
+    subtitle: 'Regionalny wystrój | 3-osobowy pokój | Prywatna łazienka | Balkon z widokiem',
+  },
+  {
+    imgUrl: '/awslins4.jpg',
     title: 'Pokój Sielski',
-    subtitle: 'To uroczy dwuosobowy pokój z balkonem na zachodnią stronę. Idealny do sielskiego wypoczynku w zaciszu naszego domu.',
+    subtitle: 'Sielski wystrój | 2-osobowy pokój | Łazienka współdzielona | Balkon z widokiem',
   },
 ];
 

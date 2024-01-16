@@ -59,10 +59,10 @@ const Explore = () => {
       
       <div className={`my-slider mt-[50px] ${styles.sliderContainer}`}>
         <Slider {...sliderSettings}>
-          {[2, 3, 4, 5, 6].map((apartmentNum) => (
-            <div key={`spa-${apartmentNum}`}>
+          {[4, 5, 6, 1, 2, 3].map((apartmentNum) => (
+            <div key={`spam-${apartmentNum}`}>
               <div style={{ position: 'relative', borderRadius: '24px' }}>
-                <img src={`spa${apartmentNum}.jpg`} alt={`Slider Image ${apartmentNum}`} style={{ borderRadius: '24px' }} />
+                <img src={`spam${apartmentNum}.jpg`} alt={`Slider Image ${apartmentNum}`} style={{ borderRadius: '24px' }} />
                 <div style={{
                   position: 'absolute',
                   bottom: '20px',

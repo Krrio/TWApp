@@ -51,10 +51,10 @@ const Explore = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <TypingText title="Zachód | Wygoda | We dwoje" textStyles="text-center text-black-50"/>
+        <TypingText title="Komfort | Wyciszenie | Romantyzm" textStyles="text-center text-black-50"/>
         <TitleText
-          title={<>Pokój 
-          Anielski</>}
+          title={<>Apartament
+          Boho</>}
           textStyles="text-center z-30 text-black"
         />
       </motion.div>
@@ -62,9 +62,8 @@ const Explore = () => {
       {/* Slider Section */}
       <div className="my-slider mt-[50px]">
         <Slider {...sliderSettings}>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
-          11, 12, 13, 14, 15, 16, 17, 18, 19].map((apartmentNum) => (
-            <div key={`pokojv-${apartmentNum}`}>
+          {[5, 6, 11, 18, 20, 34, 35, 48, 24, 21].map((apartmentNum) => (
+            <div key={`pokojvv-${apartmentNum}`}>
               <div
                 style={{
                   position: 'relative',
@@ -83,7 +82,7 @@ const Explore = () => {
                 }}
               >
                 <img
-                  src={`pokojv${apartmentNum}.jpg`}
+                  src={`pokojvv${apartmentNum}.jpg`}
                   alt={`Slider Image ${apartmentNum}`}
                   style={{ borderRadius: '24px' }}
                 />

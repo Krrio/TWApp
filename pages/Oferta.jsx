@@ -18,9 +18,9 @@ function Oferta() {
       <Explore1 />
       <Explore2 />
       <Explore3 />
-      <Explore4 />
-      <Explore5 />
       <Explore6 />
+      <Explore5 />
+      <Explore4 />
       <Sauna />
       <Footer />
     </div>

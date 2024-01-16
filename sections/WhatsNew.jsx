@@ -89,7 +89,7 @@ const WhatsNew = () => {
             className="w-[90%] h-[90%] mb-4 object-contain rounded-tl-[24px]"
           />
           <img
-            src="/spa2.jpg"
+            src="/sunaphoto1.jpg"
             alt="get-started"
             className="w-[90%] h-[90%] object-contain rounded-tl-[24px]"
           />

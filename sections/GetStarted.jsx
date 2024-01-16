@@ -25,12 +25,12 @@ const GetStarted = () => (
         className={`flex-1 ${styles.flexCenter} flex-col`}
       >
         <img
-          src="/apartament1.jpg"
+          src="/pokojexplore3.jpg"
           alt="get-started"
           className="w-[90%] h-[90%] mb-4 object-contain rounded-tr-[24px]"
         />
         <img
-          src="/apartament2.jpg"
+          src="/pokojexplore4.jpg"
           alt="get-started"
           className="w-[90%] h-[90%] object-contain rounded-tr-[24px]"
         />

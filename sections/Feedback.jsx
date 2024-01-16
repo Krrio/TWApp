@@ -31,7 +31,7 @@ const Feedback = () => (
             </h4>
             <p className="mt-[8px] font-normal sm:text-[18px]
             text-[12px] sm:leading-[22px] leading-[16px] text-black-50">
-              Klientka
+              Gość
             </p>
           </div>
 
@@ -60,7 +60,7 @@ const Feedback = () => (
             </h4>
             <p className="mt-[8px] font-normal sm:text-[18px]
             text-[12px] sm:leading-[22px] leading-[16px] text-black-50">
-              Klient
+              Gość
             </p>
           </div>
 
@@ -89,7 +89,7 @@ const Feedback = () => (
             </h4>
             <p className="mt-[8px] font-normal sm:text-[18px]
             text-[12px] sm:leading-[22px] leading-[16px] text-black-50">
-              Klient
+              Gość
             </p>
           </div>
 

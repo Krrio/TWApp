@@ -12,11 +12,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const GetStarted = () => {
-  // Initialize screenWidth with a default value (e.g., for mobile screens)
-  const [screenWidth, setScreenWidth] = useState(768); // Or another default width
+  const [screenWidth, setScreenWidth] = useState(768); 
 
   useEffect(() => {
-    // Update the screenWidth state with the actual width after the component mounts
     setScreenWidth(window.innerWidth);
 
     const handleResize = () => {
@@ -41,6 +39,11 @@ const GetStarted = () => {
   // Calculate the top position for the slider based on screenWidth
   const sliderTop = screenWidth <= 768 ? '-200px' : '0';
 
+  const isTablet = screenWidth >= 768 && screenWidth <= 1024;
+
+  const sliderMarginTop = screenWidth <= 768 ? '-150px' : '50px';
+  const sliderStyle = { marginTop: sliderMarginTop, top: sliderTop };
+
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <motion.div
@@ -49,28 +52,32 @@ const GetStarted = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
-      >
-        <motion.div
-          variants={cloudVariants('left', screenWidth)}
-          className={`flex-1 ${styles.flexCenter} flex-col`}
         >
-          <img
-            src="/moon.png"
-            alt="get-started"
-            className="w-[60%] h-[60%] mb-4 object-contain rounded-tr-[24px]"
-          />
-        </motion.div>
+        {!isTablet && (
+          <motion.div
+            variants={cloudVariants('left', screenWidth)}
+            className={`flex-1 ${styles.flexCenter} flex-col`}
+          >
+            <img
+              src="/moon.png"
+              alt="get-started"
+              className="w-[60%] h-[60%] mb-4 object-contain rounded-tr-[24px]"
+            />
+          </motion.div>
+        )}
 
-        <motion.div
-          variants={cloudVariants1('right', screenWidth)}
-          className={`flex-1 ${styles.flexCenter} flex-col`}
-        >
-          <img
-            src="/cloud.png"
-            alt="get-started"
-            className="w-[130%] h-[130%] mb-4 object-contain rounded-tr-[24px]"
-          />
-        </motion.div>
+        {!isTablet && (
+          <motion.div
+            variants={cloudVariants1('right', screenWidth)}
+            className={`flex-1 ${styles.flexCenter} flex-col`}
+          >
+            <img
+              src="/cloud.png"
+              alt="get-started"
+              className="w-[130%] h-[130%] mb-4 object-contain rounded-tr-[24px]"
+            />
+          </motion.div>
+        )}
       </motion.div>
 
       <div className="text-center" style={{ position: 'relative', top: sliderTop }}>
@@ -90,12 +97,12 @@ const GetStarted = () => {
       </div>
 
       {/* Conditionally render the slider with photos */}
-        <div className={`my-slider mt-[-150px] ${styles.sliderContainer}`} style={{ top: sliderTop }}>
-          <Slider {...sliderSettings}>
-            {[2, 3, 4, 5, 6].map((apartmentNum) => (
-              <div key={`spa-${apartmentNum}`}>
+      <div className={`my-slider mt-[-150px] ${styles.sliderContainer}`} style={sliderStyle}>
+        <Slider {...sliderSettings}>
+            {[1, 2, 3].map((apartmentNum) => (
+              <div key={`spaa-${apartmentNum}`}>
                 <div style={{ position: 'relative', borderRadius: '24px' }}>
-                  <img src={`spa${apartmentNum}.jpg`} alt={`Slider Image ${apartmentNum}`} style={{ borderRadius: '24px' }} />
+                  <img src={`spaa${apartmentNum}.jpg`} alt={`Slider Image ${apartmentNum}`} style={{ borderRadius: '24px' }} />
                   <div style={{
                     position: 'absolute',
                     bottom: '20px',

@@ -51,7 +51,7 @@ const Explore = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <TypingText title="Rodzina | Wygoda | Nadzieja" textStyles="text-center text-black-50"/>
+        <TypingText title="Kameralny | Przytulny | Wygodny" textStyles="text-center text-black-50"/>
         <TitleText
           title={<>Pokój 
           Leszczynowy</>}
@@ -62,9 +62,7 @@ const Explore = () => {
       {/* Slider Section */}
       <div className="my-slider mt-[50px]">
         <Slider {...sliderSettings}>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
-          11, 12, 13, 14, 15, 16, 17, 18, 19, 
-        20, 21, 22, 23, 24, 25, 26,].map((apartmentNum) => (
+          {[3, 11, 14, 7, 18, 22, 23, 19, 27, 28].map((apartmentNum) => (
             <div key={`pokojq-${apartmentNum}`}>
               <div
                 style={{
@@ -120,7 +118,7 @@ const Explore = () => {
                     borderRadius: '8px',
                   }}
                 >
-                  Apartament
+                  Pokój
                 </div>
               </div>
             </div>

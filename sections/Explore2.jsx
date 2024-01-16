@@ -52,7 +52,7 @@ const Explore = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <TypingText title="Komfort | Przytulność | Natura" textStyles="text-center text-black-50"/>
+        <TypingText title="Komfort | Urok | Natura" textStyles="text-center text-black-50"/>
         <TitleText
           title={<>Apartament <br className="md:block hidden" />
           w Stronę Lasu</>}
@@ -63,9 +63,7 @@ const Explore = () => {
       {/* Slider Section */}
       <div className="my-slider mt-[50px]">
         <Slider {...sliderSettings}>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
-          16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 
-        26, 27, 28, 29, 30, 31,].map((apartmentNum) => (
+          {[27, 5, 13, 16, 18, 21, 1, 30, 2, 29].map((apartmentNum) => (
             <div key={`pokoj-${apartmentNum}`}>
               <div
                 style={{

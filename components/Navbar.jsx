@@ -18,7 +18,7 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
-  const handleTouchOutside = (event) => {
+  const handleTouchOutside = (event) => { 
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       closeMenu();
     }
@@ -121,6 +121,24 @@ const Navbar = () => {
           >
             Rezerwuj
           </Link>
+          <Link
+            href="/Cennik"
+            className={`${styles.link} ${styles.textWhite}`}
+            style={linkStyles}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleHoverOut}
+          >
+            Cennik
+          </Link>
+          <Link
+            href="/Kontakt"
+            className={`${styles.link} ${styles.textWhite}`}
+            style={linkStyles}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleHoverOut}
+          >
+            Kontakt
+          </Link>
         </div>
         <img
           src="/menu.svg"
@@ -142,7 +160,7 @@ const Navbar = () => {
       transition={{ type: 'tween', duration: 0.5 }}
     >
       <ul style={{ listStyle: 'none', padding: 0 }}>
-      {["Home", "Oferta", "Galeria", "Rezerwuj"].map((item, index) => (
+      {["Home", "Oferta", "Galeria", "Rezerwuj", "Cennik", "Kontakt"].map((item, index) => (
   <motion.li
     key={item}
     initial={{ x: -50, opacity: 0 }}
@@ -168,7 +186,7 @@ const Navbar = () => {
       </motion.a>
     </Link>
   </motion.li>
-))}
+      ))}
 
         <li style={{ textAlign: 'center', marginTop: '40px', fontSize: '16px', color: 'black', fontWeight: 'bold' }}>
           Kunkowa 79 38-315

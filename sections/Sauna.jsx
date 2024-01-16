@@ -63,7 +63,7 @@ const Explore = () => {
       {/* Slider Section */}
       <div className="my-slider mt-[50px]">
         <Slider {...sliderSettings}>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10,].map((apartmentNum) => (
+          {[1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12].map((apartmentNum) => (
             <div key={`spa-${apartmentNum}`}>
               <div
                 style={{

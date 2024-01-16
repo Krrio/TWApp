@@ -17,7 +17,7 @@ const Explore = () => {
 
   // Define an array of text corresponding to each image
   const imageText = [
-    'Apartament w Stronę Lasu',
+    'Apartament Boho',
     'Apartament w Stronę Słońca',
     'Pokój Sielski',
     'Pokój Leszczynowy',
@@ -49,7 +49,7 @@ const Explore = () => {
         <TypingText title="Twój komfort jest dla nas najważniejszy" textStyles="text-center text-black-50"/>
         <TitleText
           title={<>Zobacz dlaczego <br className="md:block hidden" />
-          warto wybrać nasze pokoje</>}
+          warto wybrać nasze <br className="md:block hidden" /> apartamenty i pokoje</>}
           textStyles="text-center z-30 text-black"
         />
       </motion.div>
@@ -68,8 +68,8 @@ const Explore = () => {
       
       <div className={`my-slider mt-[50px] ${styles.sliderContainer}`}>
         <Slider {...sliderSettings}>
-          {[1, 2, 3, 4, 5, 6].map((apartmentNum) => (
-            <div key={`apartament-${apartmentNum}`}>
+          {[7, 8, 9, 10, 11, 14].map((apartmentNum) => (
+            <div key={`apartament${apartmentNum}`}>
               <div style={{ position: 'relative', borderRadius: '24px' }}>
                 <img src={`apartament${apartmentNum}.jpg`} alt={`Slider Image ${apartmentNum}`} style={{ borderRadius: '24px' }} />
                 <div style={{

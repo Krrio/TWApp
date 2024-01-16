@@ -122,38 +122,64 @@ export const planetVariants = (direction) => ({
   },
 });
 
-export const cloudVariants = (direction, screenWidth) => ({
-  hidden: {
-    x: direction === 'left' ? '-100%' : '100%',
-    rotate: 120,
-  },
-  show: {
-    x: screenWidth < 768 ? 0 : 350, // Adjust value for small screens
-    rotate: 0,
-    transition: {
-      type: 'spring',
-      duration: 1.8,
-      delay: 0.5,
-    },
-  },
-});
+export const cloudVariants = (direction, screenWidth) => {
+  // Define breakpoints
+  const isSmallScreen = screenWidth < 768;
+  const isMediumScreen = screenWidth >= 768 && screenWidth < 1024;
+  const isLargeScreen = screenWidth >= 1024;
 
-export const cloudVariants1 = (direction, screenWidth) => ({
-  hidden: {
-    x: direction === 'left' ? '-100%' : '100%',
-    rotate: 120,
-  },
-  show: {
-    x: screenWidth < 768 ? 0 : -350,
-    translateY: screenWidth < 768 ? '-90%' : '0%', // Move image higher on small devices
-    rotate: 0,
-    transition: {
-      type: 'spring',
-      duration: 1.8,
-      delay: 0.5,
+  // Adjust X and Y positions based on screen size
+  const xPosition = isSmallScreen ? 0 : isMediumScreen ? 175 : (isLargeScreen ? 350 : 350); // Adjust for large screens
+  const yPosition = isSmallScreen ? -30 : isMediumScreen ? -115 : (isLargeScreen ? -50 : -25); // Adjust for large screens
+
+  return {
+    hidden: {
+      x: direction === 'left' ? '-100%' : '100%',
+      rotate: 120,
+      translateY: 0, // Reset translateY
     },
-  },
-});
+    show: {
+      x: xPosition,
+      translateY: yPosition,
+      rotate: 0,
+      transition: {
+        type: 'spring',
+        duration: 1.8,
+        delay: 0.5,
+      },
+    },
+  };
+};
+
+export const cloudVariants1 = (direction, screenWidth) => {
+  // Define breakpoints
+  const isSmallScreen = screenWidth < 768;
+  const isMediumScreen = screenWidth >= 768 && screenWidth < 1024;
+  const isLargeScreen = screenWidth >= 1024;
+
+  // Adjust X and Y positions based on screen size
+  const xPosition = isSmallScreen ? 0 : isMediumScreen ? -55 : (isLargeScreen ? -350 : -300); // Adjust for large screens
+  const yPosition = isSmallScreen ? -240 : isMediumScreen ? -15 : (isLargeScreen ? 0 : 25); // Adjust for large screens
+
+  return {
+    hidden: {
+      x: direction === 'left' ? '-100%' : '100%',
+      rotate: 120,
+      translateY: 0, // Reset translateY
+    },
+    show: {
+      x: xPosition,
+      translateY: yPosition,
+      rotate: 0,
+      transition: {
+        type: 'spring',
+        duration: 1.8,
+        delay: 0.5,
+      },
+    },
+  };
+};
+
 
 
 

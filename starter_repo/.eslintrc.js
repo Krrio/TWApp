@@ -3,9 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@next/next/recommended",
+    "plugin:styled-jsx/recommended"
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -33,6 +35,7 @@ module.exports = {
     'linebreak-style': 0,
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
+    'no-shadow': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',

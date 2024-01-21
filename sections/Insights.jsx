@@ -21,10 +21,9 @@ const Insights = () => (
         <TitleText title="Podaruj sobie wygodę"
         textStyles="text-center text-black"/>
         <div className="mt-[50px] flex flex-col gap-[30px]">
-          {insights.map((insight, index) => (
-            <InsightCard key={`insight-${index}`} {...insight}
-            index={index + 1} />
-          ))}
+        {insights.map((insight, index) => (
+    <InsightCard key={`insight-${index}`} {...insight} index={index + 1} />
+  ))}
         </div>
       </motion.div>
   </section>

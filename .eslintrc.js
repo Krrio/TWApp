@@ -41,6 +41,8 @@ module.exports = {
     'react/jsx-indent': 0,
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
+    'semi': 'off',
+    'arrow-body-style': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',

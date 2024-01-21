@@ -10,6 +10,8 @@ import Footer from './Footer';
 import Oferta from '../pages/Oferta';
 import Galeria from '../pages/Galeria';
 import WorkWith from '../sections/WorkWith';
+import FaqSteps from './FaqSteps';
+import Modal from './Modal';
 
 export {
   Navbar,
@@ -25,4 +27,6 @@ export {
   ExploreCardSaunaWoman,
   ExploreCardSaunaMan,
   WorkWith,
+  FaqSteps,
+  Modal,
 };

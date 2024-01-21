@@ -63,6 +63,50 @@ export const startingFeatures = [
   'Ze względu na nasze przystępne ceny, możesz sobie pozwolić na wymarzony wypoczynek.',
 ];
 
+export const faqQuestions = [
+  {
+    question: 'Czym jest agroturystyka i jakie są główne cechy naszego agroturystycznego obiektu?',
+    additionalText: 'Odpowiedź placeholder',
+  },
+  {
+    question: 'Jakie rodzaje zakwaterowania oferujemy w naszym agroturystycznym obiekcie?',
+    additionalText: 'Odpowiedź placeholder',
+  },
+  {
+    question: 'Jakie atrakcje i aktywności są dostępne dla gości w okolicy naszego agroturystycznego obiektu?',
+    additionalText: 'Odpowiedź placeholder',
+  },
+  {
+    question: 'Czy akceptujemy zwierzęta domowe w naszym agroturystycznym obiekcie?',
+    additionalText: 'Odpowiedź placeholder',
+  },
+  {
+    question: 'Jakie są godziny zameldowania i wymeldowania w naszym agroturystycznym obiekcie?',
+    additionalText: 'Odpowiedź placeholder',
+  },
+  {
+    question: 'Czy dostępne są posiłki w naszym agroturystycznym obiekcie i czy istnieje możliwość wykupienia wyżywienia?',
+    additionalText: 'Odpowiedź placeholder',
+  },
+  {
+    question: 'Czy oferujemy usługi cateringowe lub możliwość korzystania z kuchni przez gości?',
+    additionalText: 'Odpowiedź placeholder',
+  },
+  {
+    question: 'Jakie udogodnienia są dostępne w naszym agroturystycznym obiekcie, takie jak parking, dostęp do internetu itp.?',
+    additionalText: 'Odpowiedź placeholder',
+  },
+  {
+    question: 'Czy oferujemy specjalne pakiety lub zniżki dla rodzin, grup lub dłuższych pobytów?',
+    additionalText: 'Odpowiedź placeholder',
+  },
+  {
+    question: 'Jak można dokonać rezerwacji w naszym agroturystycznym obiekcie i jakie są nasze zasady anulacji?',
+    additionalText: 'Odpowiedź placeholder',
+  },
+
+];
+
 export const newFeatures = [
   {
     imgUrl: '/balloon.svg',
@@ -84,27 +128,32 @@ export const insights = [
     title: 'Apartament w Stronę Lasu',
     subtitle:
         'Widok na las | Aneks kuchenny | Prywatna łazienka | 2 sypialnie | Salon z kominkiem | Taras',
-  },
+        hash: 'explore2'
+      },
   {
     imgUrl: '/awslins1.jpg',
     title: 'Apartament w Stronę Słońca',
     subtitle:
         'Widok na wzgórza | Aneks kuchenny | 2 prywatne łazienki | 3 sypialnie | Salon z kominkiem | Taras',
-  },
+        hash: 'explore3'
+      },
   {
     imgUrl: '/awslins2.jpg',
     title: 'Apartament Boho',
     subtitle: 'Rustykalny wystrój | Aneks kuchenny | 2 sypialnie | Prywatna łazienka | Salon z kominkiem | Taras',
+    hash: 'explore6'
   },
   {
     imgUrl: '/awslins3.jpg',
     title: 'Pokój Leszczynowy',
     subtitle: 'Regionalny wystrój | 3-osobowy pokój | Prywatna łazienka | Balkon z widokiem',
+    hash: 'explore5'
   },
   {
     imgUrl: '/awslins4.jpg',
     title: 'Pokój Sielski',
     subtitle: 'Sielski wystrój | 2-osobowy pokój | Łazienka współdzielona | Balkon z widokiem',
+    hash: 'explore4'
   },
 ];
 

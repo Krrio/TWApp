@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 
-const InsightCard = ({ imgUrl, title, subtitle, index }) => {
+const InsightCard = ({ imgUrl, title, subtitle, index, hash }) => {
   const arrowVariants = {
     initial: { x: 0 },
     hover: { x: 10 },
@@ -30,7 +30,7 @@ const InsightCard = ({ imgUrl, title, subtitle, index }) => {
           </p>
         </div>
 
-        <Link href="/Oferta" passHref> {/* Wrap the arrow image with Link */}
+        <Link href={`/Oferta#${hash}`} passHref>
           <motion.div
             className="hovered-arrow-container"
             whileHover="hover"

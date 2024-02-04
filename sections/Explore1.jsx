@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Slider from 'react-slick'; // Import Slider from react-slick

@@ -30,11 +30,29 @@ const TypingText = ({ text }) => {
 };
 
 const Hero = () => {
-  const [scrollAmount, setScrollAmount] = useState(10700); // Set the initial scroll amount here
+  const [scrollAmount, setScrollAmount] = useState(5950); // Default scroll amount for small devices
+
+  useEffect(() => {
+    const updateScrollAmount = () => {
+      // Check if the window width is larger than a certain breakpoint, e.g., 1024px for large devices
+      if (window.innerWidth > 1024) {
+        setScrollAmount(9300); // Set a different scroll amount for large screens
+      } else {
+        setScrollAmount(5950); // Set the scroll amount for small devices
+      }
+    };
+
+    updateScrollAmount(); // Update scroll amount on initial render
+
+    // Update scroll amount on window resize
+    window.addEventListener('resize', updateScrollAmount);
+
+    return () => window.removeEventListener('resize', updateScrollAmount);
+  }, []);
 
   const handleScroll = () => {
     window.scrollBy({
-      top: scrollAmount, // The page will scroll down by this amount
+      top: scrollAmount, // Use the dynamic scroll amount
       behavior: 'smooth' // Smooth scrolling
     });
   };

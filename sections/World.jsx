@@ -2,9 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import styles from '../styles';
+import { fadeIn } from '../utils/motion';
+import { TitleText } from '../components';
 
 const World = () => {
-  const [showText, setShowText] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -19,94 +21,44 @@ const World = () => {
   }, []);
 
   const textStyle = {
-    fontSize: isMobile ? '16px' : '18px',
+    fontSize: isMobile ? '16px' : '15px',
     fontWeight: 'bold',
     marginBottom: '12px',
   };
 
-  const handleHover = () => {
-    setShowText(true);
-  };
-
-  const handleHoverExit = () => {
-    setShowText(false);
-  };
-
-  const fadeInVariant = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: 20 }
-  };
+  const cities = [
+    { name: 'Kraków', distance: '144 km' },
+    { name: 'Warszawa', distance: '451 km' },
+    { name: 'Poznań', distance: '603 km' },
+    { name: 'Wrocław', distance: '414 km' }
+  ];
 
   return (
-    <section className="relative z-10" style={{ padding: '20px' }}>
+    <section className={`${styles.paddings} relative z-10`}>
+      <TitleText title="Przyjedź do nas"
+        textStyles="text-center text-black mb-20"/>
       <motion.div
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="mx-auto flex flex-col"
-        style={{ maxWidth: '1000px' }}
+        className={`mx-auto flex lg:flex-row flex-col gap-6 justify-center items-start w-full`}
       >
-        <motion.div
-          variants={fadeInVariant}
-          className="relative flex w-full"
-          style={{ marginTop: '68px', height: '550px' }}
-        >
-          <img
-            src="/maptw.png"
-            alt="map"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
-
-          <div
-            style={{
-              position: 'absolute',
-              top: '30%',
-              left: '49%',
-              width: '70px',
-              height: '70px',
-              padding: '6px',
-              borderRadius: '50%',
-              backgroundColor: '#5d6680'
-            }}
-            onMouseEnter={handleHover}
-            onMouseLeave={handleHoverExit}
+        {cities.map((city, index) => (
+          <motion.div
+            key={index}
+            variants={fadeIn('right', 'tween', 0.2 * index, 0.5)}
+            className="flex-1 max-w-[370px] w-full justify-end flex-col p-4 rounded-[32px] border-[1px] border-[#6a6a6a] relative"
           >
-            <img
-              src="location.png"
-              alt="place"
-              style={{ width: '100%', height: '100%' }}
-            />
-          </div>
-
-          {showText && (
-            <motion.div
-              variants={fadeInVariant}
-              style={{
-                position: 'absolute',
-                top: '20%',
-                left: '40%',
-                backgroundColor: 'gray',
-                color: 'white',
-                padding: '2px',
-                borderRadius: '4px'
-              }}
-            >
-              Kunkowa 79, 38-315 Uście Gorlickie
-            </motion.div>
-          )}
-        </motion.div>
-
-        <motion.div
-          variants={fadeInVariant}
-          className="text-center"
-          style={{ marginTop: '24px' }}
-        >
-          <p style={textStyle}>Kraków - Tarninowe Wzgórze (144 km)</p>
-          <p style={textStyle}>Warszawa - Tarninowe Wzgórze (451 km)</p>
-          <p style={textStyle}>Poznań - Tarninowe Wzgórze (603 km)</p>
-          <p style={textStyle}>Wrocław - Tarninowe Wzgórze (414 km)</p>
-        </motion.div>
+            <div className="text-center">
+              <h4 className="font-bold text-[26px] leading-[36px] text-black">
+                {city.name}
+              </h4>
+              <p style={textStyle}>
+                Tarninowe Wzgórze ({city.distance})
+              </p>
+            </div>
+          </motion.div>
+        ))}
       </motion.div>
     </section>
   );

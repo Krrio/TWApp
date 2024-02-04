@@ -21,12 +21,13 @@ const TypingText = ({ text }) => (
 );
 
 const scrollToExplore = () => {
-  const exploreSection = document.getElementById("explore");
-  if (exploreSection) {
-    exploreSection.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+  const scrollAmount = 800; // Specify the scroll amount here
 
+  window.scrollBy({
+    top: scrollAmount, // Scrolls down by the specified amount
+    behavior: 'smooth' // Smooth scroll
+  });
+};
 
 const Hero = () => (
   <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
@@ -62,18 +63,18 @@ const Hero = () => (
           <div className="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-20">
               <TypingText text="Magiczne miejsce" />
               <p className="text-white text-lg mt-2">na końcu świata</p>
-            </div>
-            <button
-      onClick={scrollToExplore}
-      className="absolute flex top-[90%] left-1/2 transform 
-      -translate-x-1/2 -translate-y-1/2 bg-white/30 backdrop-blur-sm py-3 px-6 
-      rounded-full text-white font-semibold shadow-md z-20
-      border border-white
-      transition-all duration-300
-      hover:bg-white hover:text-black hover:border-black"
-    >
-      Eksploruj <IoIosArrowForward className="ml-2 mt-[5px]" />
-    </button>
+          </div>
+          <button
+            onClick={scrollToExplore}
+            className="absolute flex top-[90%] left-1/2 transform 
+            -translate-x-1/2 -translate-y-1/2 bg-white/30 backdrop-blur-sm py-3 px-6 
+            rounded-full text-white font-semibold shadow-md z-20
+            border border-white
+            transition-all duration-300
+            hover:bg-white hover:text-black hover:border-black"
+          >
+            Eksploruj <IoIosArrowForward className="ml-2 mt-[5px]" />
+          </button>
         </div>
       </motion.div>
     </motion.div>

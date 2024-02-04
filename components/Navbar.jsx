@@ -71,7 +71,7 @@ const Navbar = () => {
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a href="/" className="logo-button">
           <img
-            src="/twlogo3.png"
+            src="/twlogoedit.png"
             alt="logo"
             className="w-[54px] h-[54px] object-contain z-60 
     sm:-mt-[20px] md:mt-[0px] lg:w-[80px] lg:h-[80px]"

@@ -1,10 +1,11 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import Link from 'next/link'; 
+import Style from 'styled-jsx/style';
 
 const calculateTimeLeft = () => {
-  const difference = +new Date('2024-01-31') - +new Date();
+  const difference = +new Date('2024-02-28') - +new Date();
   let remainingTime = {}; // Renamed to avoid shadowing
 
   if (difference > 0) {
@@ -61,7 +62,7 @@ const Modal = ({ onClose, children }) => {
           <button type="button" className="check-button">Sprawdź <span className="arrow">→</span></button>
         </Link>
       </div>
-      <style jsx>{`
+      <Style jsx>{`
         .modal-backdrop {
           position: fixed;
           top: 0;
@@ -154,7 +155,7 @@ const Modal = ({ onClose, children }) => {
           vertical-align: super;
           font-weight: 900;
         }
-      `}</style>
+      `}</Style>
     </div>
   );
 };
